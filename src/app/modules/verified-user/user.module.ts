@@ -4,7 +4,6 @@ import { NewAdvertComponent } from './components/new-advert/new-advert.component
 import { EditSettingsComponent } from './components/edit-settings/edit-settings.component';
 
 
-
 @NgModule({
   declarations: [
     NewAdvertComponent,
@@ -14,4 +13,5 @@ import { EditSettingsComponent } from './components/edit-settings/edit-settings.
     CommonModule
   ]
 })
+
 export class UserModule { }
