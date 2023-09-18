@@ -9,7 +9,6 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { CardAdvertComponent } from './components/card-advert/card-advert.component';
 import { SearchAdvertsComponent } from './components/search-adverts/search-adverts.component';
 import { AdvertContentComponent } from './components/advert-content/advert-content.component';
-import { SignPopupComponent } from './components/sign-popup/sign-popup.component';
 
 @NgModule({
   declarations: [
