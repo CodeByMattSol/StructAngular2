@@ -1,0 +1,76 @@
+.page-text-info {
+    margin: 20px 16% 15px 16%;
+}
+
+.info-text {
+    font-weight: 600;
+    font-size: 18px;
+    color: #1E293B;
+}
+
+.AdvertS-container {
+    display: grid; width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 17px;
+    grid-row-gap: 17px;
+    grid-auto-flow: dense;
+}
+
+.AdvertS-container-template {
+    display: grid; grid-row-gap: 5px;
+    cursor: pointer;
+}
+
+.AdvertS-container-template span {
+    display: block;
+}
+
+.girl {
+    background: url('girl.jpg') center center;
+    height: 12em; background-size: 100%;
+    border-radius: 4px; transition: .5s;
+}
+
+.guitar {
+    background: url('guitar.jpg') center center;
+    height: 12em; background-size: 100%;
+    border-radius: 4px; transition: .5s;
+}
+
+.main-info {
+    display: grid; grid-row-gap: 3px;
+    grid-template-rows: repeat(2, auto);
+}
+
+.AdvertS-container-template-main {
+    display: grid;
+    grid-template-rows: repeat(2, 23px);
+    font-weight: 600;
+    align-items: center;
+}
+
+.AdvertS-container-template-title {
+    color: #3B82F6;
+}
+
+.AdvertS-container-template-price {
+    color: #1E293B;
+}
+
+.AdvertS-container-template-info {
+    display: grid; color: #64748B;
+    grid-template-rows: repeat(2, 18px);
+    font-weight: 400;
+    font-size: 12px;
+    align-items: center;
+}
+
+.AdvertS-container-template:hover .girl,
+.AdvertS-container-template:hover .guitar{
+    background-size: 105%;
+}
+
+.AdvertS-container-template:hover .AdvertS-container-template-title {
+    color: #0EA5E9;
+}

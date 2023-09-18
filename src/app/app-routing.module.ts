@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
+import { SearchAdvertsComponent } from './components/search-adverts/search-adverts.component';
+import { CardAdvertComponent } from './components/card-advert/card-advert.component';
 
 const routes: Routes = [
-    { path: 'header', component: HeaderComponent},
-    { path: 'footer', component: FooterComponent},
+    { path: '', component: CardAdvertComponent},
+    { path: 'search', component: SearchAdvertsComponent},
+    // { path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
