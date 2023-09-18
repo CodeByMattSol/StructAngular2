@@ -1,1 +1,9 @@
-@import 'reset_styles.scss'
+@import 'reset_styles.scss';
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+a, button {
+    font-size: 14px;
+}

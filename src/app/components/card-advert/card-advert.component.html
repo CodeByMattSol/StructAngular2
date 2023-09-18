@@ -3,23 +3,23 @@
 </div>
 <div class="main-container">
 	<div class="AdvertS-container">
-		<div class="AdvertS-container-template">
+		<div class="AdvertS-container-template" *ngFor="let item of items">
 			<div class="img-block guitar"></div>
 			<div class="main-info">
 				<div class="AdvertS-container-template-main">
 					<span class="AdvertS-container-template-title">
-						Гитара Fender
+						{{ item.name }}
 					</span>
 					<span class="AdvertS-container-template-price">
-						20 000₽
+						{{ item.price | currency:'RUB':'symbol-narrow'}}
 					</span>
 				</div>
 				<div class="AdvertS-container-template-info">
 					<span class="AdvertS-container-template-geo">
-						Москва, Ленинский проспект
+						{{ item.location}}
 					</span>
 					<span class="AdvertS-container-template-time">
-						Сегодня 14:12
+						{{ item.time }}
 					</span>
 				</div>
 			</div>   
