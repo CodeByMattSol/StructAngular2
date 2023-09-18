@@ -1,69 +1,70 @@
 @import "../../scss/variables";
 @import "../../scss/mixins";
 
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+button, a {
+    font-size: 14px;
+}
+
 .headerMain {
-    display: flex;
-    justify-content: end;
+    @include flex-container(center, end);
+
     flex-wrap: wrap;
-    padding: 8px 16%;
+    padding: 8px $padd;
     background-color: $dark;
 }
 
 .headerMain-SignIn {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 70px;
+    @include flex-container(center, space-around);
+    @include border-radius(none, none);
+
     background-color: $none;
     color: $white;
-    border: none;
+    width: 70px;
     padding: .5em 0em;
     margin-right: 24px;
     cursor: pointer;
 }
 
 .headerMain-newAdvert-button {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 179px;
+    @include flex-container(center, space-around);
+    @include border-radius(none, 4px);
+
     background-color: $primary;
     color: $white;
-    border: none;
-    border-radius: 4px;
+    width: 179px;
     padding: 6px 12px;
-    cursor: pointer;
+    cursor: $click;
 }
 
 .headerAdv {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-container(center, space-between);
+
     margin: 24px 16%;
     flex-wrap: wrap;
 }
 
 .headerAdv-title {
-    background-color: transparent;
+    background-color: $none;
+    color: $dark;
     border: none;
-    font-family: 'Inter', sans-serif;
     font-size: 25px;
     font-weight: 700;
-    color: $dark;
 }
 
 .headerAdv-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
+    @include flex-container(center, space-between);
+    @include border-radius(1px solid $primary, 4px);
+
+    background-color: $none;
     color: $primary;
     height: 32px;
     width: 150px;
-    border: 1px solid #3B82F6;
-    border-radius: 4px;
     padding: 4px 12px;
-    cursor: pointer;
+    cursor: $click;
 }
 
 .headerAdv-menu-text {
@@ -71,33 +72,29 @@
 }
 
 .headerAdv-search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-container(center, center);
+
     width: 55%; height: 32px;
 }
 
 .headerAdv-search-input {
-    background-color: transparent;
-    border: 1px solid $lightGray; 
+    @include border-radius(1px solid $lightGray, 4px 0 0 4px);
+
+    background-color: $none;
     outline: none;
-    border-radius: 4px 0 0 4px;
     width: calc(100% - 90px);
     padding: 6px 12px;
-    font-family: 'Inter', sans-serif;
     font-size: 14px;
     color: $dark;
 }
 
 .headerAdv-search-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-container(center, space-between);
+    @include border-radius(none, 0 4px 4px 0);
+
     width: 90px;
-    cursor: pointer;
     background-color: $primary;
     color: $white;
     padding: 7px 12px;
-    border: none;
-    border-radius: 0 4px 4px 0;
+    cursor: $click;
 }
