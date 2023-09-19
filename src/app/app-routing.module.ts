@@ -7,7 +7,6 @@ import { CardAdvertComponent } from './components/card-advert/card-advert.compon
 const routes: Routes = [
     { path: '', component: CardAdvertComponent},
     { path: 'search', component: SearchAdvertsComponent},
-    // { path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
