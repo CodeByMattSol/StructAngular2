@@ -1,1 +1,39 @@
-<p>search-adverts works!</p>
+<div class="main-container">
+    <aside>
+        <span class="aside-title tl">Все категории</span>
+        <ul class="aside-categories">
+            <li class="special_">Животные</li>
+            <ul>
+                <li class="down-list 1">Товары для животных</li>
+                <li class="down-list 2">Птицы</li>
+                <li class="down-list 3">Аквариум</li>
+            </ul>
+            <li class="list">Хобби и отдых</li>
+            <li class="list">Для дачи и дома</li>
+            <li class="list">Личные вещи</li>
+            <li class="list">Услуги</li>
+            <li class="list">Недвижимость</li>
+            <li class="list">Электроника</li>
+        </ul>
+        <div class="aside-options">
+            <span class="aside-options_price tl">Цена</span>
+            <div class="aside-options-price">
+                <input class="aside-options-price_inp textStart" type="text" placeholder="Цена от">
+                <input class="aside-options-price_inp textEnd" type="text" placeholder="до, руб.">
+            </div>
+            <button class="aside-options_showBtn">Показать объявления</button>
+        </div>
+    </aside>
+    <div class="main-container-Adverts">
+        <div class="Adverts-info">
+            <span class="Adverts-info_search">Всего найдено 1234 объявления</span>
+            <div class="Adverts-info-sort">
+                <span class="Adverts-info-sort_text"> Сортировка по</span>
+                <select class="Adverts-info-sort_button">
+                    <option value="new">Новизне</option>
+                </select>
+            </div>
+        </div>
+        <app-card-advert></app-card-advert> 
+    </div>    
+</div>

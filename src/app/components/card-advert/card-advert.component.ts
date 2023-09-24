@@ -1,31 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GetAdvertsService } from '../../services/get-adverts.service'
 
 @Component({
   selector: 'app-card-advert',
   templateUrl: './card-advert.component.html',
   styleUrls: ['./card-advert.component.scss']
 })
-export class CardAdvertComponent {
-	items = [
-		{
-			name: 'Гитара Fender',
-			price: 20000,
-			location: 'Москва, Ленинский проспект',
-			time: 'Сегодня 14:12'
-		},
 
-		{
-			name: 'MacbookPro 14',
-			price: 30000,
-			location: 'Севастополь, Ленинский проспект',
-			time: 'Сегодня 11:12'
-		},
+export class CardAdvertComponent implements OnInit{
+	public data: any;
 
-		{
-			name: 'Посудомойка',
-			price: 40000,
-			location: 'Краснодар, Ленинский проспект',
-			time: 'Сегодня 10:12'
-		},
-	]
+ 	constructor(private _adv: GetAdvertsService) {}
+
+ 	ngOnInit () {
+ 		this._adv.getData().subscribe(resp => {
+      		this.data = resp
+    	})
+ 	}
 }

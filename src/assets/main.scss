@@ -1,9 +1,29 @@
 @import 'reset_styles.scss';
+@import '../app/scss/variables.scss';
 
 * {
     font-family: 'Inter', sans-serif;
 }
 
-a, button {
+a, button, input, ul {
     font-size: 14px;
+}
+
+span {
+    color: $dark;
+}
+
+li {
+    padding: 6px 0px;
+}
+
+select { 
+    font-weight: 500;
+    color: $dark;
+}
+
+aside {
+    display: grid;
+    grid-row-gap: 7px;
+    width: 230px; height: 388px;
 }

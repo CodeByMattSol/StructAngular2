@@ -5,6 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './search-adverts.component.html',
   styleUrls: ['./search-adverts.component.scss']
 })
-export class SearchAdvertsComponent {
 
-}
+export class SearchAdvertsComponent {  }

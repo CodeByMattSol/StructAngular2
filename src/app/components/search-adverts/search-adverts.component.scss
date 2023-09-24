@@ -1,0 +1,107 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.main-container {
+    @include flex-container(space-between, normal);
+}
+
+.main-container-Adverts {  
+    display: grid;
+    row-gap: 10px;
+    width: calc(100% - 250px);
+}
+
+.tl {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.aside-categories { 
+    color: $primary;
+}
+
+.special_::before { 
+    content: url('../../../assets/icons/chevron-down.svg');
+    margin-right: 5px;
+}
+
+.aside-options {
+    @include flex-container(space-between, normal);
+
+    flex-direction: column;
+    margin-top: 15px;
+    height: 115px;
+}
+
+.aside-options-price {
+    @include flex-container(space-between, normal);
+
+    flex-direction: row;
+}
+
+.aside-options-price_inp {
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    padding: 0px 8px;
+    width: calc((100% - 7px) / 2);
+    height: 33px;
+    font-weight: 500;
+}
+
+.aside-options_showBtn { 
+    border: none; border-radius: 4px;
+    background-color: $primary;
+    color: $white;
+    height: 37px;
+    cursor: $click;
+}
+
+.aside-title {
+    @include flex-container(start, center);
+
+    margin: 3.5px 0px;
+}
+
+.down-list {
+    padding-left: 35px;
+}
+
+.list {
+    font-size: 15px;
+}
+
+.list::before {
+    content: url('../../../assets/icons/chevron-right.svg');
+    margin-right: 5px;
+}
+
+.Adverts-info {
+    @include flex-container(space-between, center);
+
+    flex-wrap: wrap;
+}
+
+.Adverts-info-sort {
+    @include flex-container(space-between, center);
+
+    width: 235px;
+}
+
+.Adverts-info_search {
+    font-size: 13px;
+    color: $gray;
+    width: 208px;
+}
+
+.Adverts-info-sort_text {
+    font-size: 14px;
+    width: 103px;
+}
+
+.Adverts-info-sort_button {
+    background-color: $none;
+    border: 1px solid $lightGray;
+    border-radius: 2px;
+    padding-left: 5px;
+    height: 27px; width: 120px;
+}

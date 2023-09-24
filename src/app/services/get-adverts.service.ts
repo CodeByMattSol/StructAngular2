@@ -1,7 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { IAdvert } from "../interfaces/advert.interface";
+import { Observable } from "rxjs";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+export class GetAdvertsService {
+	url: string = '../../assets/backend-test/getAdverts-api.json'
 
-export class GetAdvertsService { }
+	constructor(private http: HttpClient){ }
+      
+    getData(): Observable<IAdvert[]> {
+        return this.http.get<IAdvert[]>(this.url)
+    }
+}

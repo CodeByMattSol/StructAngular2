@@ -1,18 +1,19 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
 .main-container { 
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-    padding: 0px 16%;
+    @include flex-container(center, normal);
 }
 
 .page-text-info {
-    margin: 20px 16% 15px 16%;
+    margin-bottom: 15px;
 }
 
 .info-text {
     font-weight: 600;
     font-size: 18px;
-    color: #1E293B;
+
+    color: $dark;
 }
 
 .AdvertS-container {
@@ -26,21 +27,14 @@
 
 .AdvertS-container-template {
     display: grid; grid-row-gap: 5px;
-    cursor: pointer;
+    cursor: $click;
 }
 
 .AdvertS-container-template span {
     display: block;
 }
 
-.girl {
-    // background: url('girl.jpg') center center;
-    height: 12em; background-size: 100%;
-    border-radius: 4px; transition: .5s;
-}
-
-.guitar {
-    // background: url('guitar.jpg') center center;
+.img-info {
     height: 12em; background-size: 100%;
     border-radius: 4px; transition: .5s;
 }
@@ -58,26 +52,26 @@
 }
 
 .AdvertS-container-template-title {
-    color: #3B82F6;
+    color: $primary;
 }
 
 .AdvertS-container-template-price {
-    color: #1E293B;
+    color: $dark;
 }
 
 .AdvertS-container-template-info {
-    display: grid; color: #64748B;
+    display: grid; 
+    color: $gray;
     grid-template-rows: repeat(2, 18px);
     font-weight: 400;
     font-size: 12px;
     align-items: center;
 }
 
-.AdvertS-container-template:hover .girl,
-.AdvertS-container-template:hover .guitar{
+.AdvertS-container-template:hover .img-info {
     background-size: 105%;
 }
 
 .AdvertS-container-template:hover .AdvertS-container-template-title {
-    color: #0EA5E9;
+    color: $primaryHover;
 }
