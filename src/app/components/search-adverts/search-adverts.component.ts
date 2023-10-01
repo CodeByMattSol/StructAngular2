@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-search-adverts',
@@ -6,4 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-adverts.component.scss']
 })
 
-export class SearchAdvertsComponent {  }
+export class SearchAdvertsComponent { 
+    category: any; details: any;
+
+    private querySubscription: Subscription;
+
+    constructor(private route: ActivatedRoute){
+        this.querySubscription = route.queryParams.subscribe(
+            (queryParam: any) => {
+                this.category = queryParam['id'];
+                this.details = queryParam['parentId'];
+            }
+        );
+    }
+}

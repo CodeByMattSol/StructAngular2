@@ -3,15 +3,15 @@
 </div>
 <div class="main-container">
 	<div class="AdvertS-container">
-		<div class="AdvertS-container-template" *ngFor="let item of data">
+		<div routerLink="/advert" [queryParams]="{'id': }" class="AdvertS-container-template" *ngFor="let item of data">
 			<div class="img-block img-info" [ngStyle]="{'background': 'url(' + item.img + ') center center no-repeat'}"></div>
 			<div class="main-info">
 				<div class="AdvertS-container-template-main">
 					<span class="AdvertS-container-template-title">
-						{{ item.title }}
+						{{ item.name }}
 					</span>
 					<span class="AdvertS-container-template-price">
-						{{ item.price | currency:'RUB':'symbol-narrow'}}
+						{{ item.cost | currency:'RUB':'symbol-narrow'}}
 					</span>
 				</div>
 				<div class="AdvertS-container-template-info">

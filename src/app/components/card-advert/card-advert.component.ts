@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetAdvertsService } from '../../services/get-adverts.service'
+import { GetAdvertsService } from '../../services/get-adverts.service';
 
 @Component({
   selector: 'app-card-advert',
@@ -7,7 +7,7 @@ import { GetAdvertsService } from '../../services/get-adverts.service'
   styleUrls: ['./card-advert.component.scss']
 })
 
-export class CardAdvertComponent implements OnInit{
+export class CardAdvertComponent implements OnInit {
 	public data: any;
 
  	constructor(private _adv: GetAdvertsService) {}
@@ -15,6 +15,7 @@ export class CardAdvertComponent implements OnInit{
  	ngOnInit () {
  		this._adv.getData().subscribe(resp => {
       		this.data = resp
+      		console.log(this.data) 
     	})
  	}
 }

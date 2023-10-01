@@ -12,6 +12,7 @@ import { AdvertContentComponent } from './components/advert-content/advert-conte
 import { SignPopupComponent } from './components/sign-popup/sign-popup.component'
 
 import { GetAdvertsService } from './services/get-adverts.service'
+import { GetAdvertSingleService } from './services/get-advert-single.service'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { GetAdvertsService } from './services/get-adverts.service'
     HttpClientModule
   ],
   
-  providers: [GetAdvertsService],
+  providers: [GetAdvertsService, GetAdvertSingleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
