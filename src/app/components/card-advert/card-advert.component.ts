@@ -15,7 +15,7 @@ export class CardAdvertComponent implements OnInit {
  	ngOnInit () {
  		this._adv.getData().subscribe(resp => {
       		this.data = resp
-      		console.log(this.data) 
+      		console.log(this.data)
     	})
  	}
 }

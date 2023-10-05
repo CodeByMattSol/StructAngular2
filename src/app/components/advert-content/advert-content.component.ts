@@ -12,7 +12,7 @@ import { GetAdvertSingleService } from '../../services/get-advert-single.service
 
 export class AdvertContentComponent{
     id: string;
-    public dataSingle: any;
+    dataSingle: any;
 
     private subscription: Subscription;
     constructor(private activateRoute: ActivatedRoute, private _adv: GetAdvertSingleService) {
@@ -22,7 +22,6 @@ export class AdvertContentComponent{
     ngOnInit () {
         this._adv.getData(this.id).subscribe(resp => {
             this.dataSingle = resp
-            console.log(this.dataSingle)
         })
     }
 }
